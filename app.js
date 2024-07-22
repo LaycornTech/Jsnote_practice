@@ -105,3 +105,54 @@ function fibbonacci(n) {
     }
 }
 console.log(fibbonacci(6));
+
+console.log("==============Array Methods==============");
+// Push method
+let array = []
+for(let j = 1; j <= 6; j++){
+    array.push(j);
+}
+console.log(array); //[1, 2, 3....]
+array.reverse()
+console.log(array);    // [6, 5, 4....] 
+
+console.log("==========set Method===================");
+let arrayRepeat = [1,1,1, 2 ,2, 3, 3, 4, 5,4 , 6, 5, 4, 6, 5, 7, 7, 5, 4, 3, 2] 
+let unikNumbas = [...new Set(arrayRepeat)]
+console.log(unikNumbas);
+console.log("=========Reverse method=============");
+unikNumbas.reverse();
+console.log(unikNumbas);
+
+console.log("========= forEach method=============");
+const numbaz = [1, 2, 3, 4, 5, 6]
+numbaz.forEach((num) =>{
+    console.log(num);
+})
+// Same as
+console.log("========Equivalent to forEach===========");
+for (const num of numbaz){
+    // console.log(`Equivalent to forEach ${'\n' + num}`);
+    console.log(num);
+}
+console.log("=========Push=============");
+const colors = ['red', 'yelow', 'blue']
+colors.push('white')
+console.log(colors);
+// colors.pop()
+console.log("=========Unshift:adds to index 0=========");
+colors.unshift('black')   //adds black to the beginning
+console.log(colors);
+
+console.log("==========Shift:removes index 0 ====================");
+colors.shift()
+console.log(colors);
+
+console.log("========Splice: Remove elems at stated indices===============");
+colors.push('purple', 'indigo')
+colors.splice(1, 2)
+console.log(colors);
+
+console.log("============Slice: removes through stated indices============");
+colors.slice(1, 3)
+console.log(colors);
